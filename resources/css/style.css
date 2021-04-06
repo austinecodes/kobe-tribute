@@ -1,0 +1,230 @@
+/* ------------------------------------------ */
+/* Fonts */
+/* ------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
+
+/* ------------------------------------------ */
+/* Colors
+purple: #552583;
+yellow: #FDB927; 
+GREY COLOR (SUBTLE): #ccc
+White: #fff
+*/
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------------------ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /* to make width and height connected with padding and margin*/
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: black;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+     /* Render text perfectly */
+     text-rendering: optimizeLegibility;
+     /* Para sa mga lumalagpas sa value/data sa screen */
+     overflow-x: hidden;
+}
+
+
+//Change color when highlighted
+::-moz-selection { /* Code for Firefox */
+    background: #552583;
+  }
+  
+  ::selection {
+    background: #552583;
+  }
+
+/* ------------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------ */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* ----- HEADINGS ------ */
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 320%;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+}
+
+h1 span {
+    color: #FDB927;
+}
+
+h2 {
+    font-size: 160%;
+    text-align: center;
+    color: #552583;
+    padding: 30px;
+    font-weight: 400;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #FDB927;
+    content: " ";
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+/* ----- PARAGRAPHS ------ */
+
+.indent {
+    margin-left: 30px;
+}
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+/* ----- ICONS ------ */
+
+/* ----- LINKS ------ */
+
+a:link,
+a:visited {
+    color: #FDB927;
+    text-decoration: none;
+    padding-bottom: 1px;
+    /* border-bottom: 1px solid #FDB927; */
+    transition: border 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ------------------------------------------ */
+/* HEADER COMPONENTS */
+/* ------------------------------------------ */
+
+header {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/kobe-main.jpeg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* Image stays on the same place */
+    background-attachment: fixed;
+}
+
+.main-head-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 2%;
+}
+
+.main-head-box  h1 {
+    margin: 0;
+    width: 55%;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.main-head-box  p {
+    margin-left: 18%;
+    color: white;
+}
+
+.logo {
+    height: 190px;
+    width: auto;
+    float:left;
+    margin-top: 20px;
+}
+
+
+.main-nav {
+    list-style: none;
+    float: right;
+    margin-top: 50px;
+    margin-right: 2%;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 110%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    letter-spacing: 1px;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #FDB927;
+}
+
+/* ------------------------------------------ */
+/* ABOUT ME */
+/* ------------------------------------------ */
+
+.section-about {
+
+}
+
+/* ------------------------------------------ */
+/* GALLERY */
+/* ------------------------------------------ */
+
+.section-gallery {
+    padding: 0;
+}
+
+.kobe-showcase {
+    list-style: none;
+    /* Para ma make sure magamit yung budong width */
+    width: 100%;
+}
+
+.kobe-showcase li {
+    display: block;
+    float: left;
+    /* Dapat mag equals to 100% width dun sa .meal-showcase | 25 * 4 images = 100% */
+    width: 10%;
+}
